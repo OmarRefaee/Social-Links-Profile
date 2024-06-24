@@ -1,0 +1,18 @@
+@use "../Helpers/mixins" as *;
+
+.attribution {
+    @include position(relative, bottom);
+    color: grey;
+    font-weight: bold;
+    width: 100%;
+    font-size: 11px;
+    margin-top: 10px;
+    text-align: center;
+    a {
+        text-decoration: none;
+        color: rgb(50, 50, 50);
+        &:hover {
+            color: rgba(50, 50, 50, 0.5);
+        }
+    }
+}

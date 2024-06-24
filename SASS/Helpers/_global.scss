@@ -1,0 +1,28 @@
+// Import Variable Font
+@font-face {
+    font-family: "Inter";
+    src: url(".../assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+
+// Import Static Font Files
+@font-face {
+    font-family: "Inter";
+    src: url(".../assets/fonts/Inter-Regular.ttf");
+}
+
+// Import Static Bold Font Files
+@font-face {
+    font-family: "Inter";
+    src: url(".../assets/fonts/Inter-Bold.ttf");
+}
+
+// Import Static Semi Bold Font Files
+@font-face {
+    font-family: "Inter";
+    src: url(".../assets/fonts/Inter-SemiBold.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}

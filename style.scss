@@ -1,0 +1,34 @@
+@use "./SASS/Helpers/mixins" as *;
+@use "./SASS/Helpers/global" as *;
+@use "./SASS/Variables/colors" as *;
+@use "./SASS/Layout/footer" as *;
+@use "./SASS/Layout/linksSect" as *;
+
+* {
+    transition: 0.3s ease-in-out;
+}
+
+body {
+    background-color: $off-black;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    @include breakpoints(mobile) {
+        height: auto;
+    }
+    @include flex(column, center, center);
+}
+
+main {
+    background-color: $dark-grey;
+    color: $white;
+    width: 327px;
+    @include breakpoints(large, medium) {
+        width: 390px;
+    }
+    margin: 120px 0 105px;
+    border-radius: 10px;
+    @media (max-width: 360px) {
+        width: 90%;
+    }
+}

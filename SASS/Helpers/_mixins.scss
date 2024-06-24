@@ -1,0 +1,44 @@
+@mixin breakpoints($points...) {
+    @each $point in $points {
+        @if $point == mobile {
+            @media (max-width: 767px) {
+                @content;
+            }
+        }
+        @if $point == small {
+            @media (min-width: 768px) and (max-width: 991px) {
+                @content;
+            }
+        }
+        @if $point == medium {
+            @media (min-width: 992px) and (max-width: 1199px) {
+                @content;
+            }
+        }
+        @if $point == large {
+            @media (min-width: 1200px) {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin position($position: absolute, $direction: bottom, $direction2: left) {
+    position: $position;
+    #{$direction}: 0;
+    #{$direction2}: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin flex(
+    $direction: row,
+    $justify: center,
+    $align: center,
+    $align-content: center
+) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    align-content: $align-content;
+}
